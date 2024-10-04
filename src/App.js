@@ -13,7 +13,6 @@ function App() {
         <Route path="/read" element={<Footer/>} />
         <Route path="/create" element={<Header/>} />
       </Routes>
-      <Footer />
     </Router>
   );
 }
