@@ -29,7 +29,7 @@ import Movies from "./movies";
     const Read = () => {
       return (
       <div>
-        <h3>Hello from the read component!</h3>;
+        <h3>Hello from the read component!</h3>
         <Movies myMovies ={data}/>
       </div>
       
