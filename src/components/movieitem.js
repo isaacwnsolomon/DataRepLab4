@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+// Importing card component from boostrap 
 import Card from 'react-bootstrap/Card';
 
 function MovieItem(props) {
@@ -20,5 +21,5 @@ function MovieItem(props) {
     </div>
   );
 }
-
+// Exports MovieItem
 export default MovieItem;
