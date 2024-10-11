@@ -1,10 +1,12 @@
+// Importing bootstrap 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
+// Navigation bar arrow fucntion 
 const NavigationBar = () => {
   return (
+    // Creating the navigation bar and linking the buttons with components
         <Navbar bg="dark" data-bs-theme="dark">
           <Container>
             <Navbar.Brand href="/">Navbar</Navbar.Brand>
@@ -17,5 +19,5 @@ const NavigationBar = () => {
       </Navbar>
   );
 };
-
+// Exporting 
 export default NavigationBar;
