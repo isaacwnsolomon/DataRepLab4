@@ -1,5 +1,8 @@
+// Importing react hooks and useState
 import { useEffect, useState } from "react";
+// Importing axios to make HTTP requests
 import axios from "axios";
+// IMporting Movies from movies
 import Movies from "./movies";
 // Arrow function 
 
@@ -28,15 +31,22 @@ import Movies from "./movies";
             "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
           }
     ];*/
+
+    //Arrow function which defines read component
     const Read = () => {
 
+      // useState hook to manage movies current state
       const[movies,setMovies] = useState([]);
 
+      // useEffect to carry out an effect each time the state changes
     useEffect(
       ()=>{
+        // Using axios to make a http get request from url
         	axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
           .then((response)=>{
+            // Log data to console
             console.log(response.data);
+            // Update movies state
             setMovies(response.data.movies);
           })
           .catch()
