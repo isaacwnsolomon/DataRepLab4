@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Movies from "./movies";
 // Arrow function 
 
     // Returns piece of text 
 
-    const data = [
+   /* const data = [
         {
             "Title": "Avengers: Infinity War",
             "Year": "2018",
@@ -25,12 +27,26 @@ import Movies from "./movies";
             "Type": "movie",
             "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
           }
-    ];
+    ];*/
     const Read = () => {
+
+      const[movies,setMovies] = useState([]);
+
+    useEffect(
+      ()=>{
+        	axios.get('https://jsonblob.com/api/jsonblob/1287718524221775872')
+          .then((response)=>{
+            console.log(response.data);
+            setMovies(response.data.movies);
+          })
+          .catch()
+      },[]
+    );
+   
       return (
       <div>
         <h3>Hello from the read component!</h3>
-        <Movies myMovies ={data}/>
+        <Movies myMovies ={movies}/>
       </div>
       
       );
